@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Flashcards de Engenharia de Software</h1>
+        <p>Aprenda e revise os conceitos essenciais!</p>
+    </header>
+
+    <section id="flashcards"></section>
+    
+    <div class="controls">
+        <input type="text" id="question" placeholder="Pergunta">
+        <input type="text" id="answer" placeholder="Resposta">
+        <button onclick="addFlashcard()">Adicionar Flashcard</button>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Isabelly Camargo</p>
+    </footer>
+
+    <script>
+        let flashcards = [
+            { question: "O que é Engenharia de Software?", answer: "Disciplina que trata de todos os aspectos da produção de software." },
+            { question: "O que são requisitos funcionais?", answer: "Descrições de funções específicas que o sistema deve fornecer." },
+            { question: "O que é um ciclo de vida de software?", answer: "Modelo que descreve as fases de desenvolvimento e manutenção do software." },
+            { question: "O que é UML?", answer: "Linguagem de Modelagem Unificada usada para especificar, visualizar e documentar artefatos de software." },
+            { question: "O que é um algoritmo?", answer: "Sequência de passos finitos para resolver um problema específico." },
+            { question: "O que é refatoração?", answer: "Processo de melhoria do código sem alterar seu comportamento externo." },
+            { question: "O que é teste unitário?", answer: "Teste de unidades individuais de código para verificar se funcionam como esperado." },
+            { question: "O que é integração contínua?", answer: "Prática de integrar código de todos os desenvolvedores em um repositório compartilhado várias vezes ao dia." },
+            { question: "O que é um padrão de projeto?", answer: "Solução reutilizável para um problema comum no design de software." },
+            { question: "O que é gerenciamento de configuração de software?", answer: "Processo de controle e acompanhamento de mudanças no software." }
+        ];
+
+        function addFlashcard() {
+            const question = document.getElementById('question').value;
+            const answer = document.getElementById('answer').value;
+
+            if (question && answer) {
+                flashcards.push({ question, answer });
+                document.getElementById('question').value = '';
+                document.getElementById('answer').value = '';
+                displayFlashcards();
+            }
+        }
+
+        function displayFlashcards() {
+            const flashcardsDiv = document.getElementById('flashcards');
+            flashcardsDiv.innerHTML = '';
+
+            flashcards.forEach((card, index) => {
+                const cardDiv = document.createElement('div');
+                cardDiv.className = 'flashcard';
+                cardDiv.innerHTML = `
+                    <p class="question">${card.question}</p>
+                    <p class="answer" id="answer-${index}">${card.answer}</p>
+                    <button onclick="showAnswer(${index})">Mostrar Resposta</button>
+                `;
+                flashcardsDiv.appendChild(cardDiv);
+            });
+        }
+
+        function showAnswer(index) {
+            const answerSpan = document.getElementById(`answer-${index}`);
+            answerSpan.style.display = 'inline';
+        }
+
+        // Display initial flashcards
+        displayFlashcards();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d0f8e5;
+    color: #333;
+    padding: 20px;
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+    background-color: #58c9a5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #f1f1f1;
+    font-size: 1.2em;
+}
+
+.flashcard {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.flashcard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.flashcard .question {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.flashcard .answer {
+    display: none;
+    color: #2f6f57;
+    font-style: italic;
+}
+
+button {
+    padding: 10px;
+    background-color: #58c9a5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a38f;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.controls input, .controls button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.controls input {
+    width: 250px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1em;
+    color: #888;
+}
