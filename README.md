@@ -13,12 +13,9 @@ O objetivo deste projeto é criar um gerenciador de flashcards simples para ajud
 
 ## Cronograma de Desenvolvimento
 
-| Etapa                      | Descrição                                                               | Prazo       |
-| **Planejamento e Design**  | Definir objetivos, funcionalidades e estrutura do projeto.              | 02/12/2024  |
-| **Desenvolvimento Inicial**| Criar a estrutura HTML e CSS, layout básico.                            | 04/12/2024  |
-| **Implementação das Funcionalidades** | Adicionar lógica para inserção e visualização de flashcards. | 06/12/2024  |
-| **Testes e Melhorias**     | Testar funcionalidades, corrigir erros e melhorar o design.             | 08/12/2024  |
-| **Documentação e Entrega** | Escrever documentação e preparar para entrega final.                    | 10/12/2024  |
+Planejamento e Design: Definir objetivos, funcionalidades e estrutura do projeto. Prazo: 30/11/2024
+Desenvolvimento Inicial: Criar a estrutura HTML e CSS, layout básico e interatividade. Prazo: 02/12/2024
+Testes e Melhorias: Testar funcionalidades, corrigir erros, melhorar design e documentar. Prazo: 04/12/2024
 
 ## Documentação
 
